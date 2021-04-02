@@ -116,7 +116,7 @@ Superuser created successfully.
 - 이렇게 하는 이유는: db 생성시 localhost 로 만들었고, 9999는 포트 넘버라서
 -----------------------------------
 
-### 2. 프로젝트 (django_practices)에 application 추가하기
+## 2. 프로젝트 (django_practices)에 application 추가하기
 
 #### 1. Application 들의 통합 template 디렉토리 templates 만들기
 1) 디렉토리 생성  
