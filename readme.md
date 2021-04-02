@@ -1,6 +1,6 @@
 # Django Practices
 
-## 장고 프로젝트 (django_practices) 만들기
+## 1. 장고 프로젝트 (django_practices) 만들기
 ### 1. pycharm 에서 프로젝트 (django_practices) 생성/설정/테스트
 
 ### 2. django libray 설치 (터미널에서) 
