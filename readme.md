@@ -171,12 +171,64 @@ INSTALLED_APPS = [
 >django_practices  -- (1)
 >>templates   --(2와 같은 위치)
 >>>helloworld
-   
+
 4) urls.py 에 URL 등록하고 views.py 에 요청 처리 함수 만들고 template(html) 연결하고.....(반복반복)
 
+####3. emaillist01 Application 만들기 (4/5 Mon)
+1) Application 생성
+```shell
+(venv) # python manage.py startapp emaillist01
+```
+- 현재 돌아가는 서브 종료: ctrl + C 
+2) Application 등록 (setting.py) :  'emaillist01' 등록해주는 작업
+```python
+INSTALLED_APPS = [
+    'emaillist01',
+    'helloworld',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+```
+3) Application의 templates 디렉토리 생성  
+>django_practices  -- (1)
+>>templates   --(2와 같은 위치)
+>>>helloworld,
+>>> emaillist01
+
+
+####4. guestbook01 Application 만들기 (4/5 Mon)
+1) Application 생성
+```shell
+(venv) # python manage.py startapp guestbook01
+```
+- 현재 돌아가는 서브 종료: ctrl + C
+2) Application 등록 (setting.py) :  'guestbook01' 등록해주는 작업
+```python
+INSTALLED_APPS = [
+    'guestbook01',
+    'emaillist01',
+    'helloworld',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+```
+3) Application의 templates 디렉토리 생성  
+>django_practices  -- (1)
+>>templates   --(2와 같은 위치)
+>>>helloworld,
+>>> emaillist01,
+>>> guestbook01
 ----------
 <
-오늘 총 작업하면서 열어봤던 파일들> 
+오늘(4/3/21 Fri) 총 작업하면서 열어봤던 파일들> 
 - settings.py  
 -  urls.py  
 - views.py
@@ -186,3 +238,6 @@ INSTALLED_APPS = [
   
 - hello2.html   
   (tags.html 과 같이 pycharm 에서 helloworld 밑에 html 파일을 만든 것임)
+  
+<
+4/5/21 Mon: emaillist01, guestbook01 추가 작업>
