@@ -119,7 +119,7 @@ Superuser created successfully.
 
 ## 2. 프로젝트 (django_practices)에 application 추가하기
 
-#### 1. Application 들의 통합 template 디렉토리 templates 만들기
+### 1. Application 들의 통합 template 디렉토리 templates 만들기
 1) 디렉토리 생성  
 django_practices (프로젝트 처음 만들때 만들어진 디렉토리(1))
 > django_practices  -- (1)
@@ -149,7 +149,7 @@ TEMPLATES = [
     },
 ]
 ```
-####2. helloworld Application 만들기
+### 2. helloworld Application 만들기
 1) Application 생성
 ```shell
 (venv) # python manage.py startapp helloworld
@@ -174,7 +174,7 @@ INSTALLED_APPS = [
 
 4) urls.py 에 URL 등록하고 views.py 에 요청 처리 함수 만들고 template(html) 연결하고.....(반복반복)
 
-####3. emaillist01 Application 만들기 (4/5 Mon)
+### 3. emaillist01 Application 만들기 (4/5 Mon)
 1) Application 생성
 ```shell
 (venv) # python manage.py startapp emaillist01
@@ -200,7 +200,7 @@ INSTALLED_APPS = [
 >>> emaillist01
 
 
-####4. guestbook01 Application 만들기 (4/5 Mon)
+### 4. guestbook01 Application 만들기 (4/5 Mon)
 1) Application 생성
 ```shell
 (venv) # python manage.py startapp guestbook01
