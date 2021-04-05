@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form test</title>
+</head>
+<body>
+    <h1>Sign up</h1>
+    <!-- 여기 써있는 url 로 밑에 적은것들 다 보내는 작업: join url 로 가고 views 에서 어떻게 응답할지-->
+    <form action="/join" method="post"> {% csrf_token %}
+        <!--django 에서 토큰같은걸 생성하는데 그걸 생성해 줘야 안전한 url 이라고 인식해서 페이지 승인을 함-->
+        <!--get:보안이 안됨, post가 데이터도 더 많이 넣을 수 있음.
+        근데 post 할때는 view 에서도 post 로 받고, join/ 뒤에 슬래시 빼줘 url 가서 + 토큰생성. 확인결과 토큰 생성 후에는 나중에 {}부분 빼줘도 승인함..-->
+        email: <input type="text" name="email" value = ""/>
+        <br><br/>
+
+        password: <input type="password" name="password" value = ""/>
+        <br><br/>
+
+        gender: <input type="radio" name="gender" value="male"/> man
+
+
+        <input type="radio" name="gender" value="female"/> female
+        <!-- name=gender 같으면 상호 베타적으로 선택이 됨. gender, gender2 이러면 선택이 둘다 되버림
+        ex>name='gender' name='gender2' 이렇게 하면 남자 여자 둘다 선택 가능-->
+
+        <br><br/>
+        hobby:
+        <input type="checkbox" name="hobbies" value="swimming"> swimming
+        <input type="checkbox" name="hobbies" value="coding"> coding
+        <input type="checkbox" name="hobbies" value="reading"> reading
+        <input type="checkbox" name="hobbies" value="cooking"> cokking
+        <br><br/>
+
+        Introuce yourself:<br/>
+        <textarea name = "desc" style = "width:200px; height:100px" ></textarea>
+        <br><br/>
+        <input type="submit" value = "가입"/> <!-- 인라인 테그: 아무리 벌려도 엔터를 치든 스페이스를 치든 둘의 간격은 스페이스 하나-->
+    </form>
+
+    <a href="/"> main 으로 가기</a>
+</body>
+</html>
