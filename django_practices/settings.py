@@ -118,10 +118,10 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
-DATETIME_FORMAT = "Y-m-d P h:i:s"
-USE_L10N = False
 
-USE_TZ = False
+USE_L10N = True
+
+USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
