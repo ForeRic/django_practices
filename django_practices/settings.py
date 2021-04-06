@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'guestbook02',
+    'emaillist02',
+    'mathfilters',
     'guestbook01',
     'emaillist01',
     'helloworld',
@@ -115,10 +118,10 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
+DATETIME_FORMAT = "Y-m-d P h:i:s"
+USE_L10N = False
 
-USE_L10N = True
-
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
