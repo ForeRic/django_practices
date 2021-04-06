@@ -28,8 +28,12 @@ def delete(request):
     # password = request.POST["password"]
 
     # guestbookmodel.deleteby_no_and_password(no, password)
-    print("--" + request.POST['id'] + "--")
-    #guestbook = Guestbook.objects.filter(id=request.GET['id']).filter(password=request.GET['password'])
+    # print("--" + request.POST['id'] + "--")
+    guestbook = Guestbook.objects.filter(id=request.POST['id']).filter(password=request.POST['password'])
     # 영속화 되어있는 객체를 뽑아와서 그걸 delete
-    #guestbook.delete()
+    guestbook.delete()
     return HttpResponseRedirect("/guestbook02")
+
+# 똑같은데  삭제 버튼 누르면 밑에처럼 뜸.
+# ValueError at /guestbook02/delete
+# Field 'id' expected a number but got ''.
