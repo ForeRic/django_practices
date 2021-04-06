@@ -18,10 +18,13 @@ from django.urls import path
 
 import helloworld.views as helloworldviews
 import emaillist01.views as emaillist01views
+import emaillist02.views as emaillist02views
 import guestbook01.views as guestbook01views
+import guestbook02.views as guestbook02views
 
 urlpatterns = [
     path('', helloworldviews.main),
+
     path('join', helloworldviews.join),
     path('form/', helloworldviews.form),
     path('hello1/', helloworldviews.hello1),
@@ -31,10 +34,19 @@ urlpatterns = [
     path('emaillist01/form', emaillist01views.form),
     path('emaillist01/add', emaillist01views.add),
 
+    path('emaillist02/', emaillist02views.index),
+    path('emaillist02/form', emaillist02views.form),
+    path('emaillist02/add', emaillist02views.add),
+
     path('guestbook01/', guestbook01views.index),
     path('guestbook01/deleteform', guestbook01views.deleteform),
     path('guestbook01/add', guestbook01views.add),
     path('guestbook01/delete', guestbook01views.delete),
+
+    path('guestbook02/', guestbook02views.index),
+    path('guestbook02/deleteform', guestbook02views.deleteform),
+    path('guestbook02/add', guestbook02views.add),
+    path('guestbook02/delete', guestbook02views.delete),
 
     path('admin/', admin.site.urls),
 ]
